@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Donate Bangladesh</title>
+
+    <!-- DasiUi cdn -->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+
+<body>
+    <header>
+
+        <nav class="sticky top-0 bg-white  flex items-center justify-between px-8 py-4 z-50">
+
+            <div class="flex items-center">
+                <button class="btn bg-green-500 text-white px-4 py-2 rounded-md">Blog</button>
+            </div>
+
+
+            <div class="flex items-center gap-2 text-center">
+                <img src="./assets/logo.png" alt="Logo" class="w-8 h-8">
+                <h2 class="text-lg font-bold text-gray-800">Flood Donate Bangladesh</h2>
+            </div>
+
+
+            <div class="flex items-center gap-2">
+                <img src="./assets/coin.png" alt="Coin" class="w-8 h-8">
+                <h3 class="text-yellow-500 text-lg font-semibold">5000 BDT</h3>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- Button section start -->
+        <section>
+
+            <body class="bg-gray-100">
+
+                <div class="sticky top-0 bg-white shadow-md flex justify-center gap-4 p-4 z-10">
+                    <button id="donation-tab" class="tab-button bg-green-500 text-white px-4 py-2 rounded-md"
+                        onclick="toggleTab('donation')">
+                        Donation
+                    </button>
+                    <button id="history-tab" class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md"
+                        onclick="toggleTab('history')">
+                        History
+                    </button>
+                </div>
+
+
+        </section>
+        <!-- button section end -->
+
+
+
+
+
+        <!-- Donation Section Starts -->
+        <Section>
+
+            <!-- Donation Card 01 -->
+            <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden flex">
+                <!-- Image Section -->
+                <div class="w-1/2">
+                    <img src="./assets/noakhali.png" alt="Flood Relief Image"
+                        class="w-full h-full object-cover" />
+                </div>
+
+                <!-- Content Section -->
+                <div class="w-1/2 p-6 flex flex-col justify-between">
+                    <!-- Donation Info -->
+                    <div>
+                        <div class="flex items-center mb-2">
+                            <img src="./assets/coin.png" alt="Coin Icon" class="w-5 h-5 mr-2" />
+                            <span class="text-yellow-500 font-semibold text-lg">0 BDT</span>
+                        </div>
+                        <h2 class="text-lg font-bold mb-2">
+                            Donate for Flood at Noakhali, Bangladesh
+                        </h2>
+                        <p class="text-gray-700 mb-4">
+                            The recent floods in Noakhali have caused significant damage to homes
+                            and infrastructure. Your donation will help provide essential
+                            supplies to those affected by this disaster. Every contribution, big
+                            or small, makes a difference. Please join us in supporting the relief
+                            efforts and making a positive impact on the lives of those in need.
+                        </p>
+                    </div>
+
+                    <!-- Donation Form -->
+                    <div>
+                        <input type="text" placeholder="Write Donation Amount"
+                            class="w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-green-500" />
+                        <button
+                            class="w-full bg-green-500 text-white px-4 py-2 rounded-md font-semibold hover:bg-green-600">
+                            Donate Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            
+        </Section>
+
+
+        <!-- History section Starts -->
+
+        <section>
+            <div id="history-section" class="p-4 hidden">
+                <h1 class="text-lg font-bold">History Section</h1>
+                <p>This is the history section content.</p>
+            </div>
+        </section>
+
+
+    </main>
+
+
+
+    <footer class="footer bg-neutral text-neutral-content p-10"></footer>
+
+</body>
+<script>
+    function toggleTab(tab) {
+        // Buttons
+        const donationTab = document.getElementById("donation-tab");
+        const historyTab = document.getElementById("history-tab");
+
+        // Sections
+        const donationSection = document.getElementById("donation-section");
+        const historySection = document.getElementById("history-section");
+
+        // Toggle active state and styles
+        if (tab === "donation") {
+            donationTab.classList.remove("bg-gray-200", "text-gray-700");
+            donationTab.classList.add("bg-green-500", "text-white");
+            historyTab.classList.remove("bg-green-500", "text-white");
+            historyTab.classList.add("bg-gray-200", "text-gray-700");
+
+            donationSection.classList.remove("hidden");
+            historySection.classList.add("hidden");
+        } else if (tab === "history") {
+            historyTab.classList.remove("bg-gray-200", "text-gray-700");
+            historyTab.classList.add("bg-green-500", "text-white");
+            donationTab.classList.remove("bg-green-500", "text-white");
+            donationTab.classList.add("bg-gray-200", "text-gray-700");
+
+            historySection.classList.remove("hidden");
+            donationSection.classList.add("hidden");
+        }
+    }
+</script>
+<!-- javascript file adding section -->
+<script src=""></script>
+
+</html>
