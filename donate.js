@@ -4,6 +4,7 @@ document.getElementById('btn-1').addEventListener('click', function(event){
     const inputAmount = parseInt(document.getElementById('input-amount').value); 
     let mainBalance = parseInt(document.getElementById('main-balance').innerText);
 
+
     if (inputAmount > 0 && inputAmount <= mainBalance) {
 
         const donationMainBalance = parseInt(document.getElementById('donation-balance').innerText); 
@@ -15,10 +16,9 @@ document.getElementById('btn-1').addEventListener('click', function(event){
         const newMainBalance = mainBalance - inputAmount;
         document.getElementById('main-balance').innerText = newMainBalance;
 
-        alert('Successfully Add your Donation!')
+        alert('Successfully Add your Donation!');
 
-        // console.log('Updated Donation Balance:', newDonationBalance);
-        // console.log('Updated Main Balance:', newMainBalance);
+
 
         const donationHistory = document.getElementById('donation-history');
         const donationDate = new Date().toLocaleString();
@@ -38,15 +38,8 @@ document.getElementById('btn-1').addEventListener('click', function(event){
             </h3>
             <p class="text-gray-600">Date: ${donationDate}</p>
         `;
+
         donationHistory.appendChild(historyItem);
-
-        // const donationHistory = document.getElementById('donation-history');
-        // const donationDate = new Date().toLocaleString();
-        // const historyItem = document.createElement('li');
-        // historyItem.className = "mb-2 p-2 border-b border-gray-300";
-        // historyItem.textContent = `Donated: ${inputAmount} BDT on ${donationDate}`;
-        // donationHistory.appendChild(historyItem);
-
 
     } 
     
@@ -54,3 +47,14 @@ document.getElementById('btn-1').addEventListener('click', function(event){
         alert('Invalid donation amount or insufficient balance');
     }
 });
+
+
+
+
+
+
+
+
+
+
+

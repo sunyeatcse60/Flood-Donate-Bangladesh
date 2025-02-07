@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Page</title>
+    <!-- Tailwind CSS and DaisyUI CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header class="bg-[#f9d08a1f] py-6 pb-12 w-full">
+      <div class="navbar container mx-auto">
+        <div class="navbar-start">
+          <a class="btn btn-ghost md:text-xl md:px-6 bg-[#B4F461]" href="./index.html">Home</a>
+        </div>
+        <div class="navbar-center">
+          <h1 class="text-2xl font-bold">Blog Page</h1>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="container mx-auto my-8">
+      <div class="flex items-center gap-x-2">
+        <h3 class="text-xl font-bold md:text-2xl xl:text-3xl ml-4 mb-5">Important FAQ</h3>
+      </div>
+
+      <div class="space-y-3 mx-4 mb-24">
+        <!-- Question 1 -->
+        <div class="collapse collapse-arrow border-2 rounded-md">
+          <input type="radio" name="faq" />
+          <div class="collapse-title text-xl font-medium">
+            <h3 class="text-xl md:text-2xl">What is the Document Object Model (DOM)?</h3>
+          </div>
+          <div class="collapse-content">
+            <p class="text-xl ml-4">
+              The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that 
+              programs can change the document structure, style, and content.
+            </p>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="collapse collapse-arrow border-2 rounded-md">
+          <input type="radio" name="faq" />
+          <div class="collapse-title text-xl font-medium">
+            <h3 class="text-xl md:text-2xl">How do you select an element from the DOM?</h3>
+          </div>
+          <div class="collapse-content">
+            <p class="text-xl ml-4">
+              We can select an element from the DOM using methods like 
+              <code>document.getElementById()</code>, <code>document.getElementsByTagName()</code>, 
+              <code>document.getElementsByClassName()</code>, <code>document.querySelector()</code>, 
+              and <code>document.querySelectorAll()</code>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="collapse collapse-arrow border-2 rounded-md">
+          <input type="radio" name="faq" />
+          <div class="collapse-title text-xl font-medium">
+            <h3 class="text-xl md:text-2xl">What is event delegation in the context of the DOM, and why is it useful?</h3>
+          </div>
+          <div class="collapse-content">
+            <p class="text-xl ml-4">
+              Event delegation is a design pattern in JavaScript used to efficiently handle events on multiple child elements 
+              by attaching a single event listener to a common ancestor element. It is useful because it allows us to handle 
+              events dynamically and efficiently without adding separate event listeners to each child element.
+            </p>
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="collapse collapse-arrow border-2 rounded-md">
+          <input type="radio" name="faq" />
+          <div class="collapse-title text-xl font-medium">
+            <h3 class="text-xl md:text-2xl">How do you manipulate an element’s attributes and styles using the DOM?</h3>
+          </div>
+          <div class="collapse-content">
+            <p class="text-xl ml-4">
+              To manipulate an element’s attributes and styles using the DOM:
+              <br>1. Use methods like <code>getAttribute()</code>, <code>setAttribute()</code>, and <code>removeAttribute()</code> 
+              to interact with element attributes.
+              <br>2. Modify an element’s inline styles using <code>element.style.property = "value"</code>.
+              <br>3. Use <code>element.classList.add("className")</code> to add CSS classes dynamically.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-[#f9d08a1f] h-[100px] mt-24 w-full relative flex items-center justify-center">
+      <p class="text-center text-lg">© 2025 Blog Page. All rights reserved by Flood Donate Bangladesh.</p>
+    </footer>
+  </body>
+</html>
