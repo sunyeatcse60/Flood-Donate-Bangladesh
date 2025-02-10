@@ -23,7 +23,8 @@ document.getElementById('btn-2').addEventListener('click', function (event) {
 
 
 
-        const donationHistory = document.getElementById('donation-history2');
+      
+        const donationHistory = document.getElementById('donation-history');
         const donationDate = new Date().toLocaleString();
 
         const historyItem = document.createElement('div');

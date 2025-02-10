@@ -18,6 +18,7 @@ function toggleTab(tab) {
         historySection.classList.add("hidden");
     } 
     else if (tab === "history") {
+        // historyTab.classList.add('pt-70');
         historyTab.classList.remove("bg-gray-200", "text-gray-700");
         historyTab.classList.add("bg-lime-400", "text-white");
         donationTab.classList.remove("bg-lime-400", "text-white");
@@ -25,5 +26,6 @@ function toggleTab(tab) {
 
         historySection.classList.remove("hidden");
         donationSection.classList.add("hidden");
+        
     }
 }
